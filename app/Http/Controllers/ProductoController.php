@@ -20,6 +20,8 @@ class ProductoController extends Controller
             'descripcion' => ['nullable', 'string'],
             'precio' => ['required', 'numeric', 'min:0'],
             'cantidad' => ['required', 'integer', 'min:0'],
+             'marca_id'     => ['required', 'exists:marcas,id'],
+        'categoria_id' => ['required', 'exists:categorias,id'],
         ]);
 
         $producto = Productos::query()->create($validated);
@@ -39,6 +41,7 @@ class ProductoController extends Controller
             'descripcion' => ['nullable', 'string'],
             'precio' => ['sometimes', 'required', 'numeric', 'min:0'],
             'cantidad' => ['sometimes', 'required', 'integer', 'min:0'],
+
         ]);
 
         $producto->update($validated);

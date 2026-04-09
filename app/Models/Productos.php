@@ -18,6 +18,8 @@ class Productos extends Model
         'descripcion',
         'precio',
         'cantidad',
+        'marca_id',
+    'categoria_id',
     ];
 
     /**

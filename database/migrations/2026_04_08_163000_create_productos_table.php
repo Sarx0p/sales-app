@@ -17,6 +17,8 @@ return new class extends Migration
             $table->text('descripcion')->nullable();
             $table->decimal('precio', 10, 2);
             $table->unsignedInteger('cantidad')->default(0);
+             $table->foreignId('marca_id')->constrained('marcas');
+        $table->foreignId('categoria_id')->constrained('categorias');
             $table->timestamps();
         });
     }
