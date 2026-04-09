@@ -9,6 +9,7 @@ class Productos extends Model
 {
     use HasFactory;
 
+    protected $table = 'productos';
     /**
      * @var list<string>
      */

@@ -7,5 +7,6 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class cliente extends Model
 {
+    protected $table = 'clientes';
     protected $fillable = ['nombre'];
 }

@@ -19,7 +19,7 @@ class ProductoController extends Controller
             'nombre' => ['required', 'string', 'max:255'],
             'descripcion' => ['nullable', 'string'],
             'precio' => ['required', 'numeric', 'min:0'],
-            'stock' => ['required', 'integer', 'min:0'],
+            'cantidad' => ['required', 'integer', 'min:0'],
         ]);
 
         $producto = Productos::query()->create($validated);
@@ -38,7 +38,7 @@ class ProductoController extends Controller
             'nombre' => ['sometimes', 'required', 'string', 'max:255'],
             'descripcion' => ['nullable', 'string'],
             'precio' => ['sometimes', 'required', 'numeric', 'min:0'],
-            'stock' => ['sometimes', 'required', 'integer', 'min:0'],
+            'cantidad' => ['sometimes', 'required', 'integer', 'min:0'],
         ]);
 
         $producto->update($validated);
